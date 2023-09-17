@@ -1,0 +1,58 @@
+.container {
+    background: white;
+    height:55.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.column {
+    display: flex;
+    height:100px;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    flex-wrap: wrap;
+}
+select {
+    width:100px;
+}
+label {
+    font-size: 22px;
+}
+   button{
+    position: relative;
+    padding: 10px 10px;
+    font-size:15px;
+    border: 1px solid #002B5B;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: all 0.5s;
+    z-index: 1;
+    }
+  
+  button:hover {
+    transform: scale(1.1);
+    color: #fff;
+    transition: all 0.5s;
+  }
+  
+  button::after {
+    position: absolute;
+    content: "";
+    top: 0%;
+    left: 50%;
+    width: 0%;
+    height: 100%;
+    border-radius: 15px;
+    background: linear-gradient(#002B5b,#EA5455);
+    transition: all 0.5s;
+    z-index: -1;
+  }
+  
+  button:hover::after {
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    transition: all 0.5s;
+  }
+ 

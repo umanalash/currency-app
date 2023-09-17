@@ -1,0 +1,31 @@
+<div class="current">
+  <div class="currency">
+    <h2>CURRENCY CONVERTER</h2>
+    
+    <div class="con1">
+      <label for="baseCurrency">Base Currency:</label>
+      <select id="baseCurrency" [(ngModel)]="baseCurrency" (change)="convertCurrency()">
+        <option *ngFor="let option of rateOptions" [value]="option">{{ option }}</option>
+      </select>
+    </div>
+
+    <div class="con2">
+      <label for="targetCurrency">Target Currency:</label>
+      <select id="targetCurrency" [(ngModel)]="targetCurrency" (change)="convertCurrency()">
+        <option *ngFor="let option of rateOptions" [value]="option">{{ option }}</option>
+      </select>
+    </div>
+
+    <div class="con3">
+      <label for="amount">Amount to Convert:</label>
+      <input type="number" id="amount" [(ngModel)]="amount">
+    </div>
+
+    <button id="convert" (click)="convertCurrency()">Convert</button>
+    
+    <div *ngIf="conversionResult">
+      <p>Result: {{ amount }} {{ baseCurrency }} = {{ conversionResult }} {{ targetCurrency }}</p>
+    </div>
+    
+  </div>
+</div>

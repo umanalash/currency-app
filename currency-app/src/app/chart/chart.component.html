@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="column">
+    <!-- <div>
+      <label for="baseCurrency">Base Currency:</label>
+      <select id="baseCurrency" [(ngModel)]="baseCurrency" (change)="updateChart()">
+        <option *ngFor="let option of rateOptions" [value]="option">{{ option }}</option>
+      </select>
+    </div> -->
+    <!-- <div>
+      <label for="targetCurrency">Target Currency:</label>
+      <select id="targetCurrency" [(ngModel)]="targetCurrency" (change)="updateChart()">
+        <option *ngFor="let option of rateOptions" [value]="option">{{ option }}</option>
+      </select>
+    </div> -->
+    <div>
+      <label for="date">Date:</label>
+      <input type="date" id="date" [(ngModel)]="selectedDate" (change)="updateChart()">
+    </div>
+   
+    <button (click)="updateChart()">Update Chart</button>
+</div>
+    <div class="chart-container">
+      <canvas #canvas id="canvas" height="700"></canvas>
+    </div>
+  </div>
