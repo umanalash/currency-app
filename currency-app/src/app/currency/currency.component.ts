@@ -20,6 +20,7 @@ export class CurrencyComponent implements OnInit {
 
   ngOnInit() {
     this.fetchCurrencyData();
+    this.convertCurrency();
   }
 
   fetchCurrencyData() {
